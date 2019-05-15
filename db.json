@@ -1,0 +1,202 @@
+{
+  "featured-blogs": [
+    {
+      "id": 1,
+      "title": "Angular-Services",
+      "short_desc": "Components shouldn't fetch or save data directly and they ...",
+      "author": "Nikhil",
+      "images": "/assets/images/slider1.jpg",
+      "created_at": "25-04-2019"
+    },
+    {
+      "id": 2,
+      "title": "Angular-Routing",
+      "short_desc": "In Angular, the best practice is to load and configure ... ",
+      "author": "Bhush",
+      "images": "/assets/images/slider2.jpg",
+      "created_at": "02-05-2017"
+    },
+    {
+      "id": 3,
+      "title": "Reactive-Forms",
+      "short_desc": "Reactive forms provide a model-driven approach to ...",
+      "author": "tushar",
+      "images": "/assets/images/slider3.jpg",
+      "created_at": "13-07-2018"
+    },
+    {
+      "id": 4,
+      "title": "Dynamic Forms",
+      "short_desc": "Building handcrafted forms can be costly and time-consuming, ...",
+      "author": "Nitish",
+      "images": "/assets/images/slider4.jpg",
+      "created_at": "20-01-2018"
+    },
+    {
+      "id": 5,
+      "title": "Template-Driven-Forms",
+      "short_desc": "Reactive forms provide a model-driven approach to handling form ...",
+      "author": "tushar",
+      "images": "/assets/images/slider5.jpg",
+      "created_at": "13-07-2018"
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Angular-Services",
+      "short_desc": "Components shouldn't fetch or save data directly and they certainly shouldn't knowingly present fake data. They should focus on presenting data and delegate data access to a service.",
+      "author": "Nikhil",
+      "images": "/assets/images/slider1.jpg",
+      "created_at": "25-04-2019"
+    },
+    {
+      "id": 2,
+      "title": "Angular-Routing",
+      "short_desc": "In Angular, the best practice is to load and configure the router in a separate, top-level module that is dedicated to routing and imported by the root AppModule.",
+      "author": "Bhush",
+      "images": "/assets/images/slider2.jpg",
+      "created_at": "02-05-2017"
+    },
+    {
+      "id": 3,
+      "title": "Reactive-Forms",
+      "short_desc": "Reactive forms provide a model-driven approach to handling form inputs whose values change over time.",
+      "author": "tushar",
+      "images": "/assets/images/slider3.jpg",
+      "created_at": "13-07-2018"
+    },
+    {
+      "id": 4,
+      "title": "Dynamic Forms",
+      "short_desc": "Building handcrafted forms can be costly and time-consuming, especially if you need a great number of them, they're similar to each other, and they change frequently to meet rapidly changing business and regulatory requirements.",
+      "author": "Nitish",
+      "images": "/assets/images/slider4.jpg",
+      "created_at": "20-01-2018"
+    },
+    {
+      "id": 5,
+      "title": "Template-Driven-Forms",
+      "short_desc": "Reactive forms provide a model-driven approach to handling form inputs whose values change over time.",
+      "author": "tushar",
+      "images": "/assets/images/slider5.jpg",
+      "created_at": "13-07-2018"
+    },
+    {
+      "id": 6,
+      "title": "Spring Framework",
+      "short_desc": "Reactive forms provide a model-driven approach to handling form inputs whose values change over time.",
+      "author": "tushar",
+      "images": "/assets/images/slider5.jpg",
+      "created_at": "13-07-2018"
+    },
+    {
+      "id": 7,
+      "title": "Hibernate",
+      "short_desc": "Reactive forms provide a model-driven approach to handling form inputs whose values change over time.",
+      "author": "tushar",
+      "images": "/assets/images/slider5.jpg",
+      "created_at": "13-07-2018"
+    },
+    {
+      "id": 8,
+      "title": "React Js",
+      "short_desc": "Reactive forms provide a model-driven approach to handling form inputs whose values change over time.",
+      "author": "tushar",
+      "images": "/assets/images/slider5.jpg",
+      "created_at": "13-07-2018"
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Fundamental C"
+    },
+    {
+      "id": 2,
+      "name": "C++"
+    },
+    {
+      "id": 3,
+      "name": "Python"
+    },
+    {
+      "id": 4,
+      "name": "Java"
+    },
+    {
+      "id": 5,
+      "name": ".Net"
+    },
+    {
+      "id": 6,
+      "name": "Spring"
+    },
+    {
+      "id": 7,
+      "name": "Angular JS"
+    },
+    {
+      "id": 8,
+      "name": "React Js"
+    },
+    {
+      "id": 9,
+      "name": "Hibernate Framework"
+    }
+  ],
+  "contact": [
+    {
+      "id": 1,
+      "name": "Nik",
+      "email": "nik2gmail.com",
+      "phone": "80553418877",
+      "message": "ndjivibgdsjbgsdigjd gijsd bi"
+    },
+    {
+      "name": "Nikhil Raut",
+      "phone": "8055341874",
+      "email": "nikhil@gmail.com",
+      "message": "dfgdg",
+      "id": 2
+    },
+    {
+      "name": "Nitish",
+      "email": "nitishaggr@gmail.com",
+      "phone": "7898654123",
+      "message": "very nice",
+      "id": 3
+    },
+    {
+      "name": "Sonali",
+      "email": "sonali@gmail.com",
+      "phone": "8055341874",
+      "message": "fdfhjh",
+      "id": 4
+    },
+    {
+      "name": "Chandrakala",
+      "email": "chandrakala@gmail.com",
+      "phone": "986548956",
+      "message": "very good",
+      "id": 5
+    },
+    {
+      "name": "abc",
+      "email": "abca@gmail.com",
+      "phone": "986548956",
+      "message": "very good",
+      "id": 6
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "fullname": "Nikhil Raut",
+      "username": "nik",
+      "password": "nik123",
+      "city": "Pune",
+      "token": "HSUDHIUAFIDBDABGI80"
+    }
+  ]
+}
