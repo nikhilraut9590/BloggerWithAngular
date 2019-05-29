@@ -14,6 +14,7 @@ import { Category } from '../blogpost/category';
 })
 export class BlogService {
   blogAPI = "http://localhost:8088/api/blog/";
+  blogCategoryAPI = "http://localhost:8088/api/category/";
 
   blogs: Blog;
 
@@ -43,14 +44,14 @@ export class BlogService {
   }
 
   updateBlog(blog, id: number) {
-    return this.http.post<any>(this.blogAPI + '/' + id, blog)
+    return this.http.post<any>(this.blogAPI+ id, blog)
       .pipe(
         catchError(this.handleError)
       );
   }
 
   deleteBlog(id: number) {
-    return this.http.delete(this.blogAPI + 'blogs/' + id).pipe(
+    return this.http.delete(this.blogAPI + id).pipe(
       catchError(this.handleError)
     );
   }
@@ -75,7 +76,7 @@ export class BlogService {
   }
 
   getCategoryList(): Observable<Category> {
-    return this.http.get<Category>(`${this.blogAPI}category`);
+    return this.http.get<Category>(`${this.blogCategoryAPI}`);
   }
 
 

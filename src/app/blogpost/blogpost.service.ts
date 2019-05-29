@@ -11,32 +11,32 @@ import { Blog } from '../models/blog';
 export class BlogpostService {
   //private blogAPI="http://localhost:3000/";
 
-  private blogAPI="http://localhost:8088/api/blog";
+  // private blogAPI="http://localhost:8088/api/blog";
 
-  blog:Blog[];
-  errorData:{};
+  // blog:Blog[];
+  // errorData:{};
 
-  constructor(private http:HttpClient) {
+  // constructor(private http:HttpClient) {
    
-    // this.getExtBlog().subscribe((res:Blog[])=>{
-    //   this.blog=res;
-    // })
-   }
+  //   // this.getExtBlog().subscribe((res:Blog[])=>{
+  //   //   this.blog=res;
+  //   // })
+  //  }
 
-  getBlogPostLists():Observable<Blog>{
-    return this.http.get<Blog>(`${this.blogAPI}`);
-  }
-  getFeaturedBlogPostLists():Observable<Blogpost>{
-    return this.http.get<Blogpost>(`${this.blogAPI}featured-blogs`);
-  }
+  // getBlogPostLists():Observable<Blog>{
+  //   return this.http.get<Blog>(`${this.blogAPI}`);
+  // }
+  // getFeaturedBlogPostLists():Observable<Blogpost>{
+  //   return this.http.get<Blogpost>(`${this.blogAPI}featured-blogs`);
+  // }
 
-  getBlogById(id:number){
-    return this.http.get<Blogpost>(`${this.blogAPI}blogs/`+id);
-  }
+  // getBlogById(id:number){
+  //   return this.http.get<Blogpost>(`${this.blogAPI}blogs/`+id);
+  // }
 
-  getCategory():Observable<Category>{
-    return this.http.get<Category>(`${this.blogAPI}category`);
-  }
+  // getCategory():Observable<Category>{
+  //   return this.http.get<Category>(`${this.blogAPI}category`);
+  // }
   
   
 }

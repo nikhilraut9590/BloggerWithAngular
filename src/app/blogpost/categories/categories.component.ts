@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogpostService } from '../blogpost.service';
 import { Category } from '../category';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'app-categories',
@@ -9,10 +10,10 @@ import { Category } from '../category';
 })
 export class CategoriesComponent implements OnInit {
   categories:Category;
-  constructor(private blogpostservice:BlogpostService) { }
+  constructor(private blogservice:BlogService) { }
 
   ngOnInit() {
-    this.blogpostservice.getCategory().subscribe(response=>{
+    this.blogservice.getCategoryList().subscribe(response=>{
       this.categories=response}
       )
   }
