@@ -11,7 +11,7 @@ import { BlogService } from 'src/app/services/blog.service';
   styleUrls: ['./blogpost-featured.component.css']
 })
 export class BlogpostFeaturedComponent implements OnInit {
-  blog: Blog;
+  blog: Blog[];
   constructor(private blogService: BlogService, public router: Router) { }
 
   ngOnInit() {

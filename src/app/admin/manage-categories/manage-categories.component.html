@@ -39,12 +39,12 @@
       <th>Name</th>
       <th>Action</th>
   </tr>
-  <tr *ngFor="let category of category">
-      <td>{{category.id}}</td>
-      <td>{{category.name}}</td>
+  <tr *ngFor="let category of category; let index=index">
+      <td>{{index+1}}</td>
+      <td>{{category.categoryName}}</td>
       <td class="action">
-          <a  [routerLink]="['/admin/feedback/edit', category.id]" class="btn btn-info btn-sm">Edit</a>&nbsp;
-          <a (click)="onDelete(category.id)" class="btn btn-danger btn-sm">Delete</a>
+          <a  [routerLink]="['/admin/feedback/edit', category.catId]" class="btn btn-info btn-sm">Edit</a>&nbsp;
+          <a (click)="onDelete(category.catId)" class="btn btn-danger btn-sm">Delete</a>
       </td>
   </tr>
 </table>

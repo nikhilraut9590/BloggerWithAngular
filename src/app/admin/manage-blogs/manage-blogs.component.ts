@@ -10,7 +10,7 @@ import { Blog } from 'src/app/models/blog';
 })
 export class ManageBlogsComponent implements OnInit {
   error:string;
-  blogs:Blog;
+  blogs:Blog[];
   constructor(private blogService:BlogService) { }
 
   ngOnInit() {

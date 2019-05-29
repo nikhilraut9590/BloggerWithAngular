@@ -22,8 +22,8 @@ export class BlogService {
 
   }
 
-  getAllBlogs(): Observable<Blog> {
-    return this.http.get<Blog>(`${this.blogAPI}`);
+  getAllBlogs(): Observable<Blog[]> {
+    return this.http.get<Blog[]>(`${this.blogAPI}`);
   }
 
   getBlog(id: number) {

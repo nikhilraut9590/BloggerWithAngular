@@ -2,14 +2,14 @@
 <section class="featured-blog mtb-40">
   <div class="container">
     <div class="row">
-      <div class="col-md-4" *ngFor="let blog of blog; let i=index">
+      <div class="col-md-4 shadow-lg" *ngFor="let blog of blog | slice:0:3; let i=index">
         <div class="blog-box">
           <!-- <img src="assets/images/slider{{i+1}}.jpg" alt="blog1" /> -->
-          <img src="{{blog.image}}" alt="blog1" />
+          <img src="{{blog.image}}" alt="{{blog.title}}" />
           <h3>{{blog.title}}</h3>
-          <p>{{blog.category}}</p>
-          <p>Publish on: <span>October 22, 2018</span></p>
-          <p>{{blog.description | slice:0:100}}.... </p>
+         <!--  <p>{{blog.category | uppercase}}</p> -->
+          <p>Publish on: <span>{{blog.created_at | date:'mediumDate'}}</span></p>
+          <p>{{blog.description | slice:0:80}}.... </p>
           <a [routerLink]="['/blog',blog.id]" class="btn btn-danger">Read more...</a>
         </div>
       </div>

@@ -10,7 +10,7 @@ import { BlogService } from 'src/app/services/blog.service';
   styleUrls: ['./blogpost-recent.component.css']
 })
 export class BlogpostRecentComponent implements OnInit {
-  blogs:Blog;
+  blogs:Blog[];
 
   constructor(private blogService:BlogService) { }
 

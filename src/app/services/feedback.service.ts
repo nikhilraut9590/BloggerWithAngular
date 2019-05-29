@@ -11,8 +11,8 @@ export class FeedbackService {
   feedbackAPI = "http://localhost:8088/api/feedback";
   constructor(private http:HttpClient) { }
 
-  getAllFeedbacks():Observable<Feedback>{
+  getAllFeedbacks():Observable<Feedback[]>{
     console.log("feedback service..");
-      return this.http.get<Feedback>(this.feedbackAPI);
+      return this.http.get<Feedback[]>(this.feedbackAPI);
   }
 }

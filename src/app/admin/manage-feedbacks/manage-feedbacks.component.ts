@@ -8,13 +8,12 @@ import { Feedback } from 'src/app/models/feedback';
   styleUrls: ['./manage-feedbacks.component.css']
 })
 export class ManageFeedbacksComponent implements OnInit {
-  public feedback:Feedback;
+   feedback:Feedback[];
   constructor( private feedbackService:FeedbackService) { }
 
   ngOnInit() {
         this.feedbackService.getAllFeedbacks().subscribe(response=>{
             this.feedback=response;
-            console.log(this.feedback);
      });
   }
 
