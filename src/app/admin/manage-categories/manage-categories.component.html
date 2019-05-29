@@ -1,9 +1,9 @@
-<div class="row">
+<!-- <div class="row">
   <div class="col-sm-12">
     <div >
-      <table class="table table-bordered">
+      <table class="table table-bordered table-striped table-responsive">
         <tr>
-          <th>ID</th>
+          <th>#ID</th>
           <th>Name</th>
           <th>Actions</th>
          
@@ -21,4 +21,31 @@
        
     </div>
   </div>
+</div> -->
+
+
+
+<div class="dash-header">
+  <div class="dash-title">
+      <h1>Category Lists</h1>
+  </div>
+  <div class="dash-nav">
+      <a [routerLink]="['/admin/feedback/create']" class="btn btn-success">Add Category</a>
+  </div>
 </div>
+<table class="table table-bordered table-striped table-responsive">
+  <tr>
+      <th>#ID</th>
+      <th>Name</th>
+      <th>Action</th>
+  </tr>
+  <tr *ngFor="let category of category">
+      <td>{{category.id}}</td>
+      <td>{{category.name}}</td>
+      <td class="action">
+          <a  [routerLink]="['/admin/feedback/edit', category.id]" class="btn btn-info btn-sm">Edit</a>&nbsp;
+          <a (click)="onDelete(category.id)" class="btn btn-danger btn-sm">Delete</a>
+      </td>
+  </tr>
+</table>
+{{error}}

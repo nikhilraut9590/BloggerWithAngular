@@ -1,8 +1,10 @@
 export class Blogpost {
     id: number;
     title: string;
-    short_desc: string;
+    description: string;
     author: string;
-    images: string;
+    image: string;
     created_at: string;
+    updated_at: string;
+    is_featured:boolean;
 }

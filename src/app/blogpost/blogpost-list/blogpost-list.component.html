@@ -5,10 +5,11 @@
     <div class="row">
       <div class="col-md-4" *ngFor="let blog of blogs">
         <div class="blog-box">
-          <img src="{{blog.images}}" alt="blog1" />
+          <img src="{{blog.image}}" alt="blog1" />
           <h3>{{blog.title}}</h3>
-          <p>by <span>{{blog.author}}</span> on <span>October 22, 2018</span></p>
-          <p>{{blog.short_desc}} </p>
+          <p>{{blog.category}}</p>
+          <p>Posted On <span>{{blog.created_at | date:'mediumDate'}}</span></p>
+          <p>{{ (blog.description.length>80) ? (blog.description | slice:0:80)+ '...':(blog.description)}}</p>
           <a [routerLink]="['/blog',blog.id]" class="btn btn-danger">Read more...</a>
         </div>
       </div>

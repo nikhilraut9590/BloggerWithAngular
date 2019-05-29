@@ -1,7 +1,6 @@
 export class Contact {
-    id:number;
-    name:string;
-    email:string;
-    phone?:string;
-    message:string;
+    feedback_Id:number;
+    feedbacker_name:string;
+    feedbacker_emailId :string;
+    feedbacker_message:string;
 }

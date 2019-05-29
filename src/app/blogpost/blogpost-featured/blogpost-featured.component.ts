@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { BlogpostService } from '../blogpost.service';
 import { Blogpost } from '../blogpost';
 import { Router } from '@angular/router';
+import { Blog } from 'src/app/models/blog';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'app-blogpost-featured',
@@ -9,21 +11,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./blogpost-featured.component.css']
 })
 export class BlogpostFeaturedComponent implements OnInit {
-  blogpostList:Blogpost;
-
-  constructor(private blogpostService:BlogpostService, public router:Router) { }
+  blog: Blog;
+  constructor(private blogService: BlogService, public router: Router) { }
 
   ngOnInit() {
-   this.getBlogpostLists();
-    
+    this.getBlogLists();
+
   }
-getBlogpostLists(){
-  this.blogpostService.getFeaturedBlogPostLists().subscribe(res=>
-    {
-      this.blogpostList=res;
-      // console.log(this.blogpostList)
+  getBlogLists() {
+    this.blogService.getAllBlogs().subscribe(response => {
+      this.blog = response;
     });
-}
-
-
+  }
 }

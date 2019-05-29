@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CmspageService {
-contactURL="http://localhost:3000/contact";
+contactURL="http://localhost:8088/api/feedback";
 
   constructor(private http:HttpClient) { }
   httpOptions = {

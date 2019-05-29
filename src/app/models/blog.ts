@@ -1,10 +1,11 @@
 export class Blog {
     id: number;
     title: string;
-    user_id: number;
     description: string;
     image: string;
-    is_featured: boolean;
-    is_active: boolean;
+    is_featured: string;
+    is_active: string;
     created_at: Date;
+    updated_at:Date;
+    category:string;
 }

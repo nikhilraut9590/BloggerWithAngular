@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Blogpost } from '../blogpost';
 import { BlogpostService } from '../blogpost.service';
+import { Blog } from 'src/app/models/blog';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'app-blogpost-list',
@@ -9,18 +11,18 @@ import { BlogpostService } from '../blogpost.service';
 })
 export class BlogpostListComponent implements OnInit {
   title="Blogs";
-  blogs:Blogpost;
+  blogs:Blog;
 
-  constructor(private blogpostService:BlogpostService) { }
+  constructor(private blogService:BlogService) { }
 
   ngOnInit() {
-    this.getBlogpostList();
-    this.blogpostService.getBlogById(1).subscribe(res=>{
+    this.getAllBlogs();
+    this.blogService.getBlog(1).subscribe(res=>{
       
     })
   }
-  getBlogpostList(){
-    this.blogpostService.getBlogPostLists().subscribe(response=>{
+  getAllBlogs(){
+    this.blogService.getAllBlogs().subscribe(response=>{
       this.blogs=response;
     })
   }

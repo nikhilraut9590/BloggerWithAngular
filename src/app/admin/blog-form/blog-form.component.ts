@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BlogService } from '../../services/blog.service';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import { Blog } from 'src/app/models/blog';
 @Component({
   selector: 'app-blog-form',
   templateUrl: './blog-form.component.html',
@@ -21,7 +21,9 @@ export class BlogFormComponent implements OnInit {
     private fb: FormBuilder,
     private blogService: BlogService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+  
+
   ) { }
 
   ngOnInit() {
@@ -32,12 +34,15 @@ export class BlogFormComponent implements OnInit {
       this.pageTitle = 'Edit Blog';
       this.blogService.getBlog(+id).subscribe(
         res => {
+          // this.blog=res;
           this.blogForm.patchValue({
             title: res.title,
             description: res.description,
             is_featured: res.is_featured,
             is_active: res.is_active,
+            category: res.category,
             id: res.id
+          
           });
           this.imagePath = res.image;
         }
@@ -65,13 +70,22 @@ export class BlogFormComponent implements OnInit {
 
   get title() { return this.blogForm.get('title'); }
   get description() { return this.blogForm.get('description'); }
-
+  get is_active() { return this.blogForm.get('is_active'); }
+  get is_featured() { return this.blogForm.get('is_featured'); }
+  
   onSubmit() {
     const formData = new FormData();
+    console.log("**"+this.blogForm.get('title').value);
+    console.log("**"+this.blogForm.get('description').value);
+      console.log("**"+this.blogForm.get('is_featured').value); 
+       console.log("**"+this.blogForm.get('is_active').value);
+      console.log("**"+this.blogForm.get('image').value);
+
     formData.append('title', this.blogForm.get('title').value);
     formData.append('description', this.blogForm.get('description').value);
     formData.append('is_featured', this.blogForm.get('is_featured').value);
     formData.append('is_active', this.blogForm.get('is_active').value);
+    formData.append('category', this.blogForm.get('category').value);
     formData.append('image', this.blogForm.get('image').value);
 
     const id = this.blogForm.get('id').value;

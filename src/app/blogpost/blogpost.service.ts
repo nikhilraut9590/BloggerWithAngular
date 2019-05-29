@@ -9,39 +9,33 @@ import { Blog } from '../models/blog';
   providedIn: 'root'
 })
 export class BlogpostService {
-  private apiURL="http://localhost:3000/";
+  //private blogAPI="http://localhost:3000/";
 
-  private springBootAPI="http://localhost:8088/api";
+  private blogAPI="http://localhost:8088/api/blog";
 
   blog:Blog[];
-    getExtBlog(){
-      console.log("rest>>>");
-      return this.http.get(`${this.springBootAPI}/blog`);
-    }
-
-
   errorData:{};
 
   constructor(private http:HttpClient) {
    
-    this.getExtBlog().subscribe((res:Blog[])=>{
-      this.blog=res;
-    })
+    // this.getExtBlog().subscribe((res:Blog[])=>{
+    //   this.blog=res;
+    // })
    }
 
-  getBlogPostLists():Observable<Blogpost>{
-    return this.http.get<Blogpost>(`${this.apiURL}blogs`);
+  getBlogPostLists():Observable<Blog>{
+    return this.http.get<Blog>(`${this.blogAPI}`);
   }
   getFeaturedBlogPostLists():Observable<Blogpost>{
-    return this.http.get<Blogpost>(`${this.apiURL}featured-blogs`);
+    return this.http.get<Blogpost>(`${this.blogAPI}featured-blogs`);
   }
 
   getBlogById(id:number){
-    return this.http.get<Blogpost>(`${this.apiURL}blogs/`+id);
+    return this.http.get<Blogpost>(`${this.blogAPI}blogs/`+id);
   }
 
   getCategory():Observable<Category>{
-    return this.http.get<Category>(`${this.apiURL}category`);
+    return this.http.get<Category>(`${this.blogAPI}category`);
   }
   
   

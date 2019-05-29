@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from 'src/app/services/blog.service';
 import { Blogpost } from 'src/app/blogpost/blogpost';
+import { Blog } from 'src/app/models/blog';
 
 @Component({
   selector: 'app-manage-blogs',
@@ -9,11 +10,11 @@ import { Blogpost } from 'src/app/blogpost/blogpost';
 })
 export class ManageBlogsComponent implements OnInit {
   error:string;
-  blogs:Blogpost;
+  blogs:Blog;
   constructor(private blogService:BlogService) { }
 
   ngOnInit() {
-    this.blogService.getBlogs().subscribe(response=>{
+    this.blogService.getAllBlogs().subscribe(response=>{
       this.blogs=response;
     });
 

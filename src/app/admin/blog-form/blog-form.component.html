@@ -1,27 +1,26 @@
-
 <div class="dash-header">
   <div class="dash-title">
-      <h1>{{pageTitle}}</h1>
+    <h1>{{pageTitle}}</h1>
   </div>
 </div>
 <div class="blog-form">
   <form [formGroup]="blogForm" (ngSubmit)="onSubmit()">
     <div class="form-group form-row">
-        <label class="col-md-3">Title <span class="required">*</span></label>
-        <div class="col-md-9">
-          <input type="text" formControlName="title" class="form-control" placeholder="Title" required>
-          <div *ngIf="title.invalid && (title.dirty || title.touched)" class="error">
-            <div *ngIf="title.errors">
-              Title is required.
-            </div>
+      <label class="col-md-3">Title <span class="required">*</span></label>
+      <div class="col-md-9">
+        <input type="text" formControlName="title" class="form-control" placeholder="Title" required>
+        <div *ngIf="title.invalid && (title.dirty || title.touched)" class="error">
+          <div *ngIf="title.errors">
+            Title is required.
           </div>
         </div>
+      </div>
     </div>
     <div class="form-group form-row">
       <label class="col-md-3">Is Featured</label>
       <div class="col-md-9">
-        <input type="radio" formControlName="is_featured" value="1" /> Yes
-        <input type="radio" formControlName="is_featured" value="0"/> No
+        <input type="radio" formControlName="is_featured" value=true  /> Yes
+        <input type="radio" formControlName="is_featured" value=false/> No
       </div>
     </div>
     <div class="form-group form-row">
@@ -42,23 +41,37 @@
         </div>
       </div>
     </div>
-    <div class="form-group form-row">
-        <label class="col-md-3">Description <span class="required">*</span></label>
-        <div class="col-md-9">
-          <textarea formControlName="description" rows="5" class="form-control" placeholder="Description" required></textarea>
-          <div *ngIf="description.invalid && (description.dirty || description.touched)" class="error">
-            <div *ngIf="description.errors">
-              Description is required.
-            </div>
+   <!--  <div class="form-group form-row">
+      <label class="col-md-3">Category <span class="required">*</span></label>
+      <div class="col-md-9">
+        <textarea formControlName="category" rows="5" class="form-control" placeholder="Category"
+          required></textarea>
+        <div *ngIf="category.invalid && (category.dirty || category.touched)" class="error">
+          <div *ngIf="category.errors">
+            Description is required.
           </div>
         </div>
-    </div>
+      </div>
+    </div> -->
     <div class="form-group form-row">
-        <label class="col-md-3"></label>
-        <div class="col-md-9">
-          <input type="hidden" formControlName="id">
-          <button type="submit" [disabled]="!blogForm.valid" class="btn btn-primary">Save</button>
+      <label class="col-md-3">Description <span class="required">*</span></label>
+      <div class="col-md-9">
+        <textarea formControlName="description" rows="5" class="form-control" placeholder="Description"
+          required></textarea>
+        <div *ngIf="description.invalid && (description.dirty || description.touched)" class="error">
+          <div *ngIf="description.errors">
+            Description is required.
+          </div>
         </div>
+      </div>
+    </div>
+
+    <div class="form-group form-row">
+      <label class="col-md-3"></label>
+      <div class="col-md-9">
+        <input type="hidden" formControlName="id">
+        <button type="submit" [disabled]="!blogForm.valid" class="btn btn-primary">Save</button>
+      </div>
     </div>
   </form>
 </div>
